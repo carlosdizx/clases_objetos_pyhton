@@ -6,13 +6,16 @@ class Persona:
 
 
 persona1 = Persona('Carlos', 'Díaz', 23)
-print(persona1.nombre)
-print(persona1.apellido)
-print(persona1.edad)
-
-print("-------")
-
+print(f'Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
 persona2 = Persona('Ernesto', 'Basante', 32)
-print(persona2.nombre)
-print(persona2.apellido)
-print(persona2.edad)
+print(f'Persona 2: {persona2.nombre} {persona2.apellido} {persona2.edad}')
+
+print("-------Modificando los datos-------")
+persona1.nombre = "Carlos Ernesto"
+persona1.apellido = "Díaz Basante"
+persona1.edad = "Veintitres años"
+persona2.nombre = "Ernesto Carlos"
+persona2.apellido = "Basante Díaz"
+persona2.edad = 23
+print(f'Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
+print(f'Persona 2: {persona2.nombre} {persona2.apellido} {persona2.edad}')
