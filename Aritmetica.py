@@ -10,11 +10,19 @@ class Aritmetica:
     def sumar(self):
         return self.num1 + self.num2
 
+    def restar(self):
+        return self.num1 - self.num2
+
+    def multiplicar(self):
+        return self.num1 * self.num2
+
+    def dividir(self):
+        return self.num1 / self.num2
+
 
 a1 = Aritmetica(5, 3)
-a2 = Aritmetica(2, 1)
-a3 = Aritmetica(0, 0)
 
-print(a1.sumar())
-print(a2.sumar())
-print(a3.sumar())
+print(f'Suma: {a1.sumar()}')
+print(f'Resta: {a1.restar()}')
+print(f'Multiplicación: {a1.multiplicar()}')
+print(f'División: {a1.dividir():.2f}')
