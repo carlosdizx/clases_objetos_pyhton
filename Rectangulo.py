@@ -12,4 +12,10 @@ base = float(input("Ingresar la base del rectangulo: "))
 altura = float(input("Ingresar la altura del rectangulo: "))
 
 rec_1 = Rectangulo(base, altura)
-print(rec_1.calcular_area())
+print(f'Area: {rec_1.calcular_area():.2f}')
+
+base = float(input("Ingresar la base del rectangulo: "))
+altura = float(input("Ingresar la altura del rectangulo: "))
+
+rec_2 = Rectangulo(base, altura)
+print(f'Area: {rec_2.calcular_area():.2f}')
