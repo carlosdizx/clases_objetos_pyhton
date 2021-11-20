@@ -21,8 +21,15 @@ class Aritmetica:
 
 
 a1 = Aritmetica(5, 3)
-
 print(f'Suma: {a1.sumar()}')
 print(f'Resta: {a1.restar()}')
 print(f'Multiplicación: {a1.multiplicar()}')
 print(f'División: {a1.dividir():.2f}')
+
+print("-----")
+
+a2 = Aritmetica(8, 6)
+print(f'Suma: {a2.sumar()}')
+print(f'Resta: {a2.restar()}')
+print(f'Multiplicación: {a2.multiplicar()}')
+print(f'División: {a2.dividir():.2f}')
