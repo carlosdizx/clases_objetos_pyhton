@@ -1,17 +1,13 @@
 class Persona:
-    def __init__(self, nombre, apellido, edad, *valores, **terminos):
-        self.nombre = nombre
-        self.apellido = apellido
-        self.edad = edad
-        self.valores = valores
-        self.terminos = terminos
+    def __init__(self, nombre, apellido, edad, ):
+        self.__nombre = nombre
+        self._apellido = apellido
+        self._edad = edad
 
     def mostrar_detalle(self):
-        return f'{self.nombre} {self.apellido} {self.edad} {self.valores} {self.terminos}'
+        return f'{self.__nombre} {self._apellido} {self._edad}'
 
 
-persona1 = Persona('Carlos', 'Díaz', 23, '3163930876', 'B+', 'Guapo', m='Manzana', p='Pera')
-persona2 = Persona('Ernesto', 'Basante', 32)
-
-print(f'Persona 1: {persona1.mostrar_detalle()}')
-print(f'Persona 2: {persona2.mostrar_detalle()}')
+persona1 = Persona('Carlos', 'Díaz', 23)
+persona1.__nombre = 1
+print(persona1.mostrar_detalle())
