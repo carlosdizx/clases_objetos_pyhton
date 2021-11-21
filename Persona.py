@@ -11,12 +11,7 @@ class Persona:
     def nombre(self):
         return self.__nombre
 
-    @nombre.setter
-    def nombre(self, nombre):
-        self.__nombre = nombre
-
 
 persona1 = Persona('Carlos', 'Díaz', 23)
 print(persona1.nombre)
-persona1.nombre = "Carlos Ernesto"
 print(persona1.nombre)
