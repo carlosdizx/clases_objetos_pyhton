@@ -7,7 +7,16 @@ class Persona:
     def mostrar_detalle(self):
         return f'{self.__nombre} {self._apellido} {self._edad}'
 
+    @property
+    def nombre(self):
+        return self.__nombre
+
+    @nombre.setter
+    def nombre(self, nombre):
+        self.__nombre = nombre
+
 
 persona1 = Persona('Carlos', 'Díaz', 23)
-persona1.__nombre = 1
-print(persona1.mostrar_detalle())
+print(persona1.nombre)
+persona1.nombre = "Carlos Ernesto"
+print(persona1.nombre)
