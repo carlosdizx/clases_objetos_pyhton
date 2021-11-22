@@ -4,9 +4,6 @@ class Persona:
         self._apellido = apellido
         self._edad = edad
 
-    def mostrar_detalle(self):
-        return f'{self._nombre} {self._apellido} {self._edad}'
-
     @property
     def nombre(self):
         return self._nombre
@@ -30,6 +27,9 @@ class Persona:
     @edad.setter
     def edad(self, edad):
         self._edad = edad
+
+    def mostrar_detalle(self):
+        return f'{self._nombre} {self._apellido} {self._edad}'
 
 
 persona1 = Persona('Carlos', 'Díaz', 23)
