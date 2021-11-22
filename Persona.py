@@ -31,6 +31,9 @@ class Persona:
     def mostrar_detalle(self):
         return f'{self._nombre} {self._apellido} {self._edad}'
 
+    def __del__(self):
+        print(f'Persona eliminada {self.mostrar_detalle()}')
+
 
 if __name__ == '__main__':
     persona1 = Persona('Carlos', 'Díaz', 23)
