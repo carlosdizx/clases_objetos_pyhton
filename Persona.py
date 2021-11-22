@@ -37,4 +37,4 @@ class Empleado(Persona):
         self._sueldo = sueldo
 
     def __str__(self):
-        return f'Persona: {self._nombre} {self._edad} {self._sueldo}'
+        return f'{super().__str__()} {self._sueldo}'
