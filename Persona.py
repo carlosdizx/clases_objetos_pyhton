@@ -30,3 +30,12 @@ class Persona:
 
     def mostrar_detalle(self):
         return f'{self._nombre} {self._apellido} {self._edad}'
+
+
+if __name__ == '__main__':
+    persona1 = Persona('Carlos', 'Díaz', 23)
+    print(persona1.mostrar_detalle())
+    persona1.nombre = "Carlos Ernesto"
+    persona1.apellido = "Díaz Basante"
+    persona1.edad = "Veititres"
+    print(persona1.mostrar_detalle())
