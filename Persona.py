@@ -19,8 +19,8 @@ class Persona:
     def edad(self, edad):
         self._edad = edad
 
-    def mostrar_detalle(self):
-        return f'{self._nombre} {self._edad}'
+    def __str__(self):
+        return f'Persona: {self._nombre} {self._edad}'
 
 
 class Empleado(Persona):
@@ -35,7 +35,3 @@ class Empleado(Persona):
     @sueldo.setter
     def sueldo(self, sueldo):
         self._sueldo = sueldo
-
-
-empleado1 = Empleado('2M', 'Carlos', 28)
-print(empleado1.mostrar_detalle()+" "+empleado1.sueldo)
