@@ -1,7 +1,6 @@
 class Persona:
-    def __init__(self, nombre, apellido, edad, ):
+    def __init__(self, nombre, edad, ):
         self._nombre = nombre
-        self._apellido = apellido
         self._edad = edad
 
     @property
@@ -13,14 +12,6 @@ class Persona:
         self._nombre = nombre
 
     @property
-    def apellido(self):
-        return self._apellido
-
-    @apellido.setter
-    def apellido(self, apellido):
-        self._apellido = apellido
-
-    @property
     def edad(self):
         return self._edad
 
@@ -29,16 +20,22 @@ class Persona:
         self._edad = edad
 
     def mostrar_detalle(self):
-        return f'{self._nombre} {self._apellido} {self._edad}'
-
-    def __del__(self):
-        print(f'Persona eliminada {self.mostrar_detalle()}')
+        return f'{self._nombre} {self._edad}'
 
 
-if __name__ == '__main__':
-    persona1 = Persona('Carlos', 'Díaz', 23)
-    print(persona1.mostrar_detalle())
-    persona1.nombre = "Carlos Ernesto"
-    persona1.apellido = "Díaz Basante"
-    persona1.edad = "Veititres"
-    print(persona1.mostrar_detalle())
+class Empleado(Persona):
+    def __init__(self, sueldo, nombre, edad):
+        super().__init__(nombre, edad)
+        self._sueldo = sueldo
+
+    @property
+    def sueldo(self):
+        return self._sueldo
+
+    @sueldo.setter
+    def sueldo(self, sueldo):
+        self._sueldo = sueldo
+
+
+empleado1 = Empleado('2M', 'Carlos', 28)
+print(empleado1.mostrar_detalle()+" "+empleado1.sueldo)
