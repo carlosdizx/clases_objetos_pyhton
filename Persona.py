@@ -35,3 +35,6 @@ class Empleado(Persona):
     @sueldo.setter
     def sueldo(self, sueldo):
         self._sueldo = sueldo
+
+    def __str__(self):
+        return f'Persona: {self._nombre} {self._edad} {self._sueldo}'
