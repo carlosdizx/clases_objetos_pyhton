@@ -33,8 +33,8 @@ class Persona:
 
 
 persona1 = Persona('Carlos', 'Díaz', 23)
-print(f'{persona1.nombre},{persona1.apellido},{persona1.edad}')
+print(persona1.mostrar_detalle())
 persona1.nombre = "Carlos Ernesto"
 persona1.apellido = "Díaz Basante"
 persona1.edad = "Veititres"
-print(f'{persona1.nombre},{persona1.apellido},{persona1.edad}')
+print(persona1.mostrar_detalle())
